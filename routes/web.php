@@ -18,9 +18,9 @@ use App\Http\Controllers\CursoController;
 Route::get('/', HomeController::class);
 
 Route::controller(CursoController::class)->group(function (){//Agrupando las rutas en base al controlador que pertenezcan(Disp. Laravel 9)
-    Route::get('cursos', 'index');
-    Route::get('cursos/create', 'create');
-    Route::get('cursos/{curso}', 'show');
+    Route::get('cursos', 'index')->name('cursos.index');
+    Route::get('cursos/create', 'create')->name('cursos.create');
+    Route::get('cursos/{id}', 'show')->name('cursos.show');
     
 });
     
