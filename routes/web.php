@@ -21,6 +21,7 @@ Route::controller(CursoController::class)->group(function (){//Agrupando las rut
     Route::get('cursos', 'index')->name('cursos.index');
     Route::get('cursos/create', 'create')->name('cursos.create');
     Route::get('cursos/{id}', 'show')->name('cursos.show');
+    Route::post('cursos','store' )->name('cursos.store');
     
 });
     
